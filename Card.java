@@ -4,26 +4,18 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
-public class Card extends JPanel {
+public class Card {
 	private BufferedImage card;
-	private int x;
-	private int y;
-	private BufferedImage back;
-	private enum Cardtype{dumpling, sashimi, tempura, maki1, maki2, maki3, wasabi, chopsticks, pudding};
-	public Card(String type)
-	
-	{
-	try {
-	back = ImageIO.read(Card.class.getResource("/images/sushigoback.png"));
+	private String type;
+
+	public Card(String t) {
+		this.type = t;
 	}
-	catch(IOException e)
-	{
-		e.printStackTrace();
+
+	public String getType() {
+		return type;
 	}
-		
-		}
-	}
-}
+	// ...existing code...
 
 
 
